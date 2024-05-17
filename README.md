@@ -13,6 +13,9 @@ Docker helping scripts:
 8. editn - edit config in nano
 9. conrm - delete all containers of given image
 10. execute - run arg2 in con arg1
+11. editc - legacy edit file i left in because i forget i moved to better naming scheme 
+12. editnv - same as editc
+13. start - start con arg2 in compose arg1
 
 Monitoring
 1. gputop - live nvidia-smi
@@ -20,3 +23,7 @@ Monitoring
 Misc 
 1. appimage-manager - script to add aliases for all appimages in ~/apps
     use by sourcing it in your rc file
+
+Tailscale
+1. tsup - start tailscale (routes are from ajlive)
+

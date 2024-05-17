@@ -41,6 +41,15 @@ Monitoring
 Misc 
 1. appimage-manager - script to add aliases for all appimages in ~/apps
     use by sourcing it in your rc file
+2. adb-power - calls adb to emulate a power button press on the connected device
+
+Windows
+1. vmware-on.bat - turns on vmware services
+2. servkill.bat - kills background processes on windows which i find unnessacry
+3. hyprv - toggles the value for hyprv hypervisor in windows, also supports arguments as {off,on}
+4. sounds.bat - opens the legacy sound menu for sound devices
+5. valorant.bat - launches valorant
+6. shares.bat - mounts shares vault and bat from proxmox
 
 Tailscale
 1. tsup - start tailscale (routes are from ajlive)

@@ -1,0 +1,12 @@
+#Reset/Install selfhosted gateway
+#Reset
+conrm fractalnetworks/gateway-link:latest 
+conrm fractalnetworks/selfhosted-gateway:latest
+docker network rm gateway
+#Install
+cd /home/ajdj/
+git clone https://github.com/fractalnetworksco/selfhosted-gateway
+cd /home/ajdj/selfhosted-gateway
+make setup
+make gateway
+

@@ -1,0 +1,4 @@
+docker compose -f ~/docker/containers/$@/$@.yaml down
+docker compose -f ~/docker/containers/$@/$@.yaml pull
+docker compose -f ~/docker/containers/$@/$@.yaml up -d
+docker compose -f ~/docker/containers/$@/$@.yaml logs --follow

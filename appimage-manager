@@ -1,0 +1,21 @@
+#/bin/bash
+#shopt -s expand_aliases
+folder_path="$HOME/apps"
+
+# Iterate over each subfolder in the specified folder
+for subfolder in "$folder_path"/*/; do
+    if [ -d "$subfolder" ]; then
+        subfolder_name=$(basename "$subfolder")
+
+        # Find the .AppImage file in the subfolder
+        appimage_file=$(find "$subfolder" -maxdepth 1 -type f -name "*.AppImage" -print -quit)
+
+        if [ -n "$appimage_file" ]; then
+            alias "$subfolder_name"="$appimage_file"
+
+            echo "Alias created for $(basename $appimage_file) as $subfolder_name"
+        else
+            echo "No .AppImage file found in $subfolder_name"
+        fi
+    fi
+done

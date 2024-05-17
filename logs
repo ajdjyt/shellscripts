@@ -1,0 +1,2 @@
+docker compose -f ~/docker/containers/$@/$@.yaml logs --follow
+docker logs --follow $@

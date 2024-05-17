@@ -1,0 +1,2 @@
+# Press the power button on a device via adb
+adb shell input keyevent 26

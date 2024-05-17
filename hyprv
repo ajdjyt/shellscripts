@@ -1,0 +1,19 @@
+#!/bin/bash -eu
+
+if [ $# -eq 0 ]; then
+    hypervisor_launch_type=$(bcdedit | grep -i "HypervisorLaunchType" | cut -d':' -f2-)
+    case "$hypervisor_launch_type" in
+        *Auto*) 
+            bcdedit /set hypervisorlaunchtype off
+              ;;
+        *Off*) 
+            bcdedit /set hypervisorlaunchtype auto
+              ;;
+    esac
+else
+    if [ "$1" = "on" ]; then
+	bcdedit /set hypervisorlaunchtype auto
+    elif [ "$1" = "off" ]; then
+        bcdedit /set hypervisorlaunchtype off
+    fi
+fi

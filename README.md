@@ -2,6 +2,21 @@
 
 This repo contains scripts i use on linux systems, 
 
+
+nvedit will auto populate docker directory ~/docker with the following structure
+
+docker
+├── containers
+└── volumes
+
+and if in wsl
+
+/mnt
+├── d
+│   └── docker
+│       ├── containers
+│       └── volumes
+
 Docker helping scripts:
 1. up - up compose
 2. down - down compose

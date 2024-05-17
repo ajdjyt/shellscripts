@@ -1,2 +1,27 @@
-mkdir ~/docker/containers/$@
-nvim ~/docker/containers/$@/$@.yaml
+if [ -z "$cons" ]; then
+
+  if grep -qi "WSL" /proc/version || grep -qi "Microsoft" /proc/version; then
+    prefix=/mnt/d
+  else
+    prefix=~
+  fi
+  
+  constring=$prefix/docker/containers
+  volstring=$prefix/docker/volumes
+  
+  echo "export cons=$constring" >> ~/.bashrc
+  echo "export cons=$constring" >> ~/.zshrc
+  echo "export vols=$volstring" >> ~/.bashrc
+  echo "export vols=$volstring" >> ~/.zshrc
+
+  export cons=$constring
+  export vols=$volstring
+  echo "set \$cons = $constring"
+  echo "set \$vols = $volstring"
+  
+  mkdir -p $volstring
+  mkdir -p $constring
+fi
+
+mkdir -p "$cons/$@"
+nvim "$cons/$@/$@.yaml"

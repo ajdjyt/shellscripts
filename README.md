@@ -35,6 +35,10 @@ Docker helping scripts:
 12. editnv - same as editc
 13. start - start con arg2 in compose arg1
 
+
+Linux:
+1. update - arch based update script, using powerpill and yay
+
 Monitoring
 1. gputop - live nvidia-smi
 

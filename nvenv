@@ -1,1 +1,1 @@
-nvim ~/docker/containers/$@/.env
+nvim $cons/$@/.env

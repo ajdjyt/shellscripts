@@ -1,4 +1,3 @@
-docker compose -f ~/docker/containers/$@/$@.yaml down
+docker compose -f $cons/$@/$@.yaml down
 docker stop $@
 docker rm $@
-

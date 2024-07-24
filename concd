@@ -1,1 +1,1 @@
-cd ~/docker/containers/$@/
+cd $cons/$@/

@@ -1,2 +1,2 @@
-mkdir ~/docker/containers/$@
-nano ~/docker/containers/$@/$@.yaml
+mkdir $cons/$@
+nano $cons/$@/$@.yaml
